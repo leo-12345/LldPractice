@@ -1,16 +1,20 @@
 package com.LowLevelDesign;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import com.LowLevelDesign.service.TestService;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.MockitoJUnitRunner;
 
-@SpringBootTest
-class LowLevelDesignApplicationTests {
+@RunWith(MockitoJUnitRunner.Silent.class)
+public class LowLevelDesignApplicationTests {
 
-	LowLevelDesignApplication lowLevelDesignApplication;
+	@InjectMocks
+	private TestService testService;
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 		String[] args = new String[]{"Test","low","level","design"};
-		LowLevelDesignApplication.main(args);
+		testService.test();
 	}
 
 }
