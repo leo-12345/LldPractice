@@ -10,6 +10,5 @@ public class LowLevelDesignApplication {
 	private static final Logger log = LoggerFactory.getLogger(LowLevelDesignApplication.class);
 	public static void main(String[] args) {
 		SpringApplication.run(LowLevelDesignApplication.class, args);
-		log.info("Testing logs");
 	}
 }
